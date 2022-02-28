@@ -10,3 +10,4 @@ brew install grep
 brew install vim
 brew install git
 brew install zsh
+brew install gnu-sed
