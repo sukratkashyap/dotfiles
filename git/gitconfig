@@ -1,0 +1,16 @@
+[alias]
+    ch = checkout
+    br = branch
+    cm = commit
+    st = status
+    rh = reset --soft HEAD~1
+    lgs = log --pretty --oneline
+[push]
+    default = current
+[pull]
+    ff = only
+    rebase = true
+[credential]
+    helper = store
+[user]
+    name = Sukrat Kashyap

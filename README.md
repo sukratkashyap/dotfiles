@@ -1,13 +1,13 @@
 # dotfiles
 
-## MacOS
+## Installing
 
 ```bash
-./install-mac.sh
+./install.sh
 ```
 
-## Ubuntu
+## Uninstalling
 
 ```bash
-./install-ubuntu.sh
+bash clean.sh
 ```

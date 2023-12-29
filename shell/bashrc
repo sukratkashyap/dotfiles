@@ -1,0 +1,3 @@
+for FILE in $(ls -A1 ~/.shell); do
+    source ~/".shell/$FILE"
+done

@@ -1,0 +1,30 @@
+export ZSH=~/.oh-my-zsh
+
+ZSH_THEME="robbyrussell"
+CASE_SENSITIVE="false"
+
+plugins=(tmux zsh-autosuggestions zsh-syntax-highlighting)
+
+source "$ZSH/oh-my-zsh.sh"
+
+# zsh prompt
+PROMPT="%{$fg_bold[blue]%}%n@%m %{$fg[cyan]%}%~ \$(git_prompt_info)
+%(?:%{$fg_bold[green]%}$:%{$fg_bold[red]%}$)%{$reset_color%} "
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}(%{$fg[red]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[yellow]%} ✗%{$fg[blue]%})"
+
+function preexec() {
+    timer=${timer:-$SECONDS}
+}
+
+function precmd() {
+    if [ $timer ]; then
+        timer_show=$(($SECONDS - $timer))
+        export RPROMPT="%{$(echotc UP 1)%}\${timer_show}s%{$(echotc DO 1)%}"
+        unset timer
+    fi
+}
+
+# zsh auto suggestion
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#949494"
