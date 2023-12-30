@@ -1,4 +1,0 @@
-export WORK_DIR="$HOME/workplace"
-alias work="cd $WORK_DIR"
-
-alias ralias="source ~/.zshrc"
