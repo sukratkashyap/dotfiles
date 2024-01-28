@@ -1,2 +1,5 @@
 alias reload="omz reload"
 alias ghub="github"
+alias rm="rm -v"
+alias egrep="grep -E"
+alias esed="sed -r"
