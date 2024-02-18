@@ -10,11 +10,10 @@
   <action id="CloseAllEditors">
     <keyboard-shortcut first-keystroke="meta k" second-keystroke="meta w" />
   </action>
-  <action id="CommentByBlockComment">
-    <keyboard-shortcut first-keystroke="shift meta divide" />
-  </action>
+  <action id="CommentByBlockComment" />
   <action id="CommentByLineComment">
     <keyboard-shortcut first-keystroke="meta k" second-keystroke="meta c" />
+    <keyboard-shortcut first-keystroke="meta k" second-keystroke="meta u" />
   </action>
   <action id="FileChooser.NewFolder" />
   <action id="Generate">
