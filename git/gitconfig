@@ -2,6 +2,7 @@
     ch = checkout
     br = branch
     cm = commit
+    cma = commit --ammend
     st = status
     rh = reset --soft HEAD~1
     lgs = log --pretty --oneline
