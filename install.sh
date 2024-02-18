@@ -45,9 +45,32 @@ function configure_karabiner() {
     fi
 }
 
+function configure_jetbrains() {
+    PRODUCT_NAME="$1"
+    DIR_NAME="$2"
+    echo "- Jetbrains configuration ($PRODUCT_NAME)"
+    if is-darwin; then
+        for dir in ~/"Library/Application Support/JetBrains/${PRODUCT_NAME}"*; do
+            echo "-- Directory: $dir"
+            mkdir -pv "${dir}/keymaps"
+            ln -sfv "$(pwd)/configs/${DIR_NAME}/"* "${dir}/keymaps"
+        done
+    fi
+}
+
+function configure_vscode() {
+    echo "- VSCode configuration"
+    if is-darwin; then
+        ln -sfv "$(pwd)/configs/vscode/keybindings-mac.json" ~/"Library/Application Support/Code/User/keybindings.json"
+    fi
+}
+
 echo "Installing"
 configure_shell
 configure_git
 configure_ssh
 configure_tmux
 configure_karabiner
+configure_jetbrains "DataGrip" "datagrip"
+configure_jetbrains "JetBrainsClient" "intellij"
+configure_vscode
