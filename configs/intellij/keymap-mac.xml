@@ -28,6 +28,11 @@
     <mouse-shortcut keystroke="meta alt button1" />
     <mouse-shortcut keystroke="meta button1" />
   </action>
+  <action id="GotoTest">
+    <keyboard-shortcut first-keystroke="shift meta t" />
+    <keyboard-shortcut first-keystroke="meta alt t" />
+  </action>
+  <action id="GuiDesigner.SurroundPopup" />
   <action id="JumpToLastWindow" />
   <action id="ParameterInfo" />
   <action id="ReformatCode">
@@ -42,6 +47,7 @@
     <keyboard-shortcut first-keystroke="shift meta alt l" />
     <keyboard-shortcut first-keystroke="meta k" second-keystroke="meta d" />
   </action>
+  <action id="SurroundWith" />
   <action id="Terminal.ClearBuffer">
     <keyboard-shortcut first-keystroke="meta l" />
   </action>
