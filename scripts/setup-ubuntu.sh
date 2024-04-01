@@ -43,8 +43,12 @@ sudo mkdir -p -m 755 /etc/apt/keyrings && wget -qO- https://cli.github.com/packa
 # Github Desktop
 wget -qO - https://apt.packages.shiftkey.dev/gpg.key | gpg --dearmor | sudo tee /usr/share/keyrings/shiftkey-packages.gpg > /dev/null
 sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/shiftkey-packages.gpg] https://apt.packages.shiftkey.dev/ubuntu/ any main" > /etc/apt/sources.list.d/shiftkey-packages.list'
-sudo apt update && sudo apt install github-desktop
+sudo apt update && sudo apt install -y github-desktop
 
 # Install Tabby
 wget https://github.com/Eugeny/tabby/releases/download/v1.0.207/tabby-1.0.207-linux-x64.deb -O /tmp/tabby.deb
 sudo apt-get install -y /tmp/tabby.deb
+
+# ULauncher
+sudo add-apt-repository universe -y && sudo add-apt-repository ppa:agornostal/ulauncher -y
+sudo apt update && sudo apt install -y ulauncher
