@@ -4,7 +4,8 @@
     cm = commit
     cma = commit --amend
     st = status
-    rh = reset --soft HEAD~1
+    rsh = reset --soft HEAD~1
+    rhh = reset --hard HEAD~1
     lgs = log --pretty --oneline
 [push]
     default = current
