@@ -65,6 +65,15 @@ function configure_vscode() {
     fi
 }
 
+function configure_tabby() {
+    echo "- Tabby configuration"
+    if is-darwin; then
+        echo "mac"
+    else
+        ln -sfv "$(pwd)/configs/tabby/config-linux.yaml" ~/.config/tabby/config.yaml
+    fi
+}
+
 echo "Installing"
 configure_shell
 configure_git
@@ -74,3 +83,4 @@ configure_karabiner
 configure_jetbrains "DataGrip" "datagrip"
 configure_jetbrains "JetBrainsClient" "intellij"
 configure_vscode
+configure_tabby
