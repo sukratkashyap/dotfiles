@@ -1,54 +1,112 @@
 <keymap version="1" name="custom-mac" parent="Mac OS X 10.5+">
+  <action id="AIAssistant.CodeGeneration.Actions.ShowIntentionActions" />
+  <action id="Arrangement.Rule.Edit" />
+  <action id="BookmarksView.Rename" />
+  <action id="ChangesView.Rename">
+    <keyboard-shortcut first-keystroke="shift f6" />
+  </action>
   <action id="ChangesView.ToggleCommitUi" />
   <action id="CheckinProject" />
-  <action id="CloseAllEditors">
-    <keyboard-shortcut first-keystroke="meta k" second-keystroke="meta w" />
-  </action>
   <action id="CollapseSelection" />
   <action id="CommentByBlockComment" />
   <action id="CommentByLineComment">
-    <keyboard-shortcut first-keystroke="meta k" second-keystroke="meta c" />
-    <keyboard-shortcut first-keystroke="meta k" second-keystroke="meta u" />
+    <keyboard-shortcut first-keystroke="meta slash" />
   </action>
+  <action id="Console.TableResult.EditValue" />
+  <action id="Console.TableResult.GotoReferencedResult" />
+  <action id="CopyElement" />
+  <action id="DSM.GoToNextCycle" />
+  <action id="DatabaseView.CopyTable" />
+  <action id="DatabaseView.Tools" />
   <action id="DatabaseView.Tools.SubmitChanges" />
+  <action id="Debugger.EditArrayFilter" />
+  <action id="Debugger.EditCustomField" />
+  <action id="FileChooser.GoToRoot" />
   <action id="FileChooser.TogglePathBar" />
+  <action id="Generate">
+    <keyboard-shortcut first-keystroke="meta n" />
+    <keyboard-shortcut first-keystroke="ctrl enter" />
+    <keyboard-shortcut first-keystroke="alt enter" />
+  </action>
   <action id="Git.Commit.Stage" />
+  <action id="Git.Rename.Local.Branch">
+    <keyboard-shortcut first-keystroke="shift f6" />
+  </action>
+  <action id="Git.Reword.Commit">
+    <keyboard-shortcut first-keystroke="shift f6" />
+  </action>
   <action id="GotoDeclaration">
-    <keyboard-shortcut first-keystroke="meta b" />
-    <mouse-shortcut keystroke="Force touch" />
-    <mouse-shortcut keystroke="button2" />
     <keyboard-shortcut first-keystroke="f12" />
+    <mouse-shortcut keystroke="meta button1" />
   </action>
   <action id="GotoFile">
     <keyboard-shortcut first-keystroke="shift meta o" />
     <keyboard-shortcut first-keystroke="meta p" />
   </action>
   <action id="GotoImplementation">
-    <keyboard-shortcut first-keystroke="meta alt b" />
-    <mouse-shortcut keystroke="meta alt button1" />
-    <mouse-shortcut keystroke="meta button1" />
+    <mouse-shortcut keystroke="shift meta button1" />
   </action>
+  <action id="GotoNextError" />
   <action id="GotoTest">
     <keyboard-shortcut first-keystroke="shift meta t" />
     <keyboard-shortcut first-keystroke="meta alt t" />
   </action>
+  <action id="GotoTypeDeclaration">
+    <keyboard-shortcut first-keystroke="shift meta b" />
+    <keyboard-shortcut first-keystroke="shift ctrl b" />
+  </action>
+  <action id="Graph.RouteEdges" />
+  <action id="GuiDesigner.EditComponent" />
+  <action id="GuiDesigner.EditGroup" />
   <action id="GuiDesigner.SurroundPopup" />
   <action id="JumpToLastWindow" />
   <action id="ParameterInfo" />
-  <action id="ReformatCode">
-    <keyboard-shortcut first-keystroke="meta alt l" />
-    <keyboard-shortcut first-keystroke="meta k" second-keystroke="meta d" />
-  </action>
-  <action id="ShowIntentionActions">
-    <keyboard-shortcut first-keystroke="alt enter" />
+  <action id="ProblemsView.QuickFixes">
     <keyboard-shortcut first-keystroke="meta period" />
   </action>
+  <action id="ReformatCode">
+    <keyboard-shortcut first-keystroke="meta k" second-keystroke="meta d" />
+    <keyboard-shortcut first-keystroke="shift meta semicolon" />
+  </action>
+  <action id="RenameElement">
+    <keyboard-shortcut first-keystroke="f2" />
+  </action>
+  <action id="RenameFile">
+    <keyboard-shortcut first-keystroke="f2" />
+  </action>
+  <action id="Resume">
+    <keyboard-shortcut first-keystroke="meta alt r" />
+    <keyboard-shortcut first-keystroke="f9" />
+    <keyboard-shortcut first-keystroke="f5" />
+  </action>
+  <action id="SetShortcutAction">
+    <keyboard-shortcut first-keystroke="meta period" />
+  </action>
+  <action id="ShelvedChanges.Rename">
+    <keyboard-shortcut first-keystroke="shift f6" />
+  </action>
+  <action id="ShowIntentionActions">
+    <keyboard-shortcut first-keystroke="meta period" />
+  </action>
+  <action id="ShowRecentTests" />
   <action id="ShowReformatFileDialog">
-    <keyboard-shortcut first-keystroke="shift meta alt l" />
     <keyboard-shortcut first-keystroke="meta k" second-keystroke="meta d" />
   </action>
+  <action id="StepInto">
+    <keyboard-shortcut first-keystroke="f7" />
+    <keyboard-shortcut first-keystroke="f11" />
+  </action>
+  <action id="StepOver">
+    <keyboard-shortcut first-keystroke="f8" />
+    <keyboard-shortcut first-keystroke="f10" />
+  </action>
   <action id="SurroundWith" />
+  <action id="Table-startEditing" />
   <action id="Terminal.ClearBuffer">
     <keyboard-shortcut first-keystroke="meta l" />
   </action>
+  <action id="Tree-startEditing" />
+  <action id="Uml.NodeIntentions" />
+  <action id="XDebugger.SetValue" />
+  <action id="rspec.LetIntroduce" />
 </keymap>
