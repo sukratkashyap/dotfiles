@@ -1,8 +1,11 @@
 [alias]
+    a = add
+    aa = add .
     ch = checkout
     br = branch
     cm = commit
     cma = commit --amend
+    cp = cherry-pick
     st = status
     rsh = reset --soft HEAD~1
     rhh = reset --hard HEAD~1
