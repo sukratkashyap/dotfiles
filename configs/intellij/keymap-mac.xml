@@ -21,6 +21,7 @@
   <action id="DatabaseView.Tools.SubmitChanges" />
   <action id="Debugger.EditArrayFilter" />
   <action id="Debugger.EditCustomField" />
+  <action id="EditorDuplicate" />
   <action id="FileChooser.GoToRoot" />
   <action id="FileChooser.TogglePathBar" />
   <action id="Generate">
@@ -89,9 +90,7 @@
     <keyboard-shortcut first-keystroke="meta period" />
   </action>
   <action id="ShowRecentTests" />
-  <action id="ShowReformatFileDialog">
-    <keyboard-shortcut first-keystroke="meta k" second-keystroke="meta d" />
-  </action>
+  <action id="ShowReformatFileDialog" />
   <action id="StepInto">
     <keyboard-shortcut first-keystroke="f7" />
     <keyboard-shortcut first-keystroke="f11" />
