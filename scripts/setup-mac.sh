@@ -12,4 +12,4 @@ brew install \
 
 brew install --cask \
     logi-options-plus karabiner-elements alt-tab rectangle \
-    gh github visual-studio-code
+    github visual-studio-code

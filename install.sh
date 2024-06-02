@@ -68,7 +68,7 @@ function configure_vscode() {
 function configure_tabby() {
     echo "- Tabby configuration"
     if is-darwin; then
-        echo "mac"
+        ln -sfv "$(pwd)/configs/tabby/config-mac.yaml" ~/"Library/Application Support/tabby/config.yaml"
     else
         ln -sfv "$(pwd)/configs/tabby/config-linux.yaml" ~/.config/tabby/config.yaml
     fi
