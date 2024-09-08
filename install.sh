@@ -62,6 +62,8 @@ function configure_vscode() {
     echo "- VSCode configuration"
     if is-darwin; then
         ln -sfv "$(pwd)/configs/vscode/keybindings-mac.json" ~/"Library/Application Support/Code/User/keybindings.json"
+    else
+        ln -sfv "$(pwd)/configs/vscode/keybindings.json" ~/.config/Code/User/keybindings.json
     fi
 }
 
