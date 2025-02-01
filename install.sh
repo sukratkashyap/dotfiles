@@ -3,15 +3,24 @@
 set -e
 
 OS_NAME=$(uname)
-function is-darwin() {
+function is-macos() {
     if test "$OS_NAME" = "Darwin"; then
         return 0
     fi
     return 1
 }
 
-function configure_shell() {
-    echo "- Shell configuration"
+function run-configure() {
+    CONFIG_NAME="${1}"
+    CONFIG_TASK="${2}"
+    read -p "Configure $CONFIG_NAME? [yn] " ANSWER
+    if test "$ANSWER" = "y"; then
+        $CONFIG_TASK
+    fi
+}
+
+function configure-shell() {
+    echo "- Configuring shell"
     ln -sfv "$(pwd)/shell/zshrc" ~/.zshrc
     ln -sfv "$(pwd)/shell/zsh_theme" ~/.zsh_theme
     ln -sfv "$(pwd)/shell/bashrc" ~/.bashrc
@@ -19,70 +28,49 @@ function configure_shell() {
     ln -sfv "$(pwd)/shell/shell/"* ~/.shell
 }
 
-function configure_git() {
-    echo "- Git configuration"
+function configure-git() {
+    echo "- Configuring git"
     git config --global include.path "$(pwd)/git/gitconfig"
+    echo "-- include.path value"
+    git config get include.path
 }
 
-function configure_ssh() {
-    echo "- SSH configuration"
+function configure-ssh() {
+    echo "- Configuring SSH"
     mkdir -pv ~/.ssh/config.d
-    chmod 700 ~/.ssh
     ln -sfv "$(pwd)/ssh/config" ~/.ssh/config
-    chmod 700 ~/.ssh/config.d
     ln -sfv "$(pwd)/ssh/config.d/"* ~/.ssh/config.d
+    echo "-- Setting permissions"
+    chmod -v -R 700 ~/.ssh
 }
 
-function configure_tmux() {
-    echo "- Tmux configuration"
+function configure-tmux() {
+    echo "- Configuring tmux"
     ln -sfv "$(pwd)/tmux/tmux.conf" ~/.tmux.conf
 }
 
-function configure_karabiner() {
-    if is-darwin; then
-        echo "- Karabiner configuration"
-        ln -sfv "$(pwd)/configs/karabiner" ~/.config
-    fi
-}
-
-function configure_jetbrains() {
-    PRODUCT_NAME="$1"
-    DIR_NAME="$2"
-    echo "- Jetbrains configuration ($PRODUCT_NAME)"
-    if is-darwin; then
-        for dir in ~/"Library/Application Support/JetBrains/${PRODUCT_NAME}"*; do
-            echo "-- Directory: $dir"
-            mkdir -pv "${dir}/keymaps"
-            ln -sfv "$(pwd)/configs/${DIR_NAME}/"* "${dir}/keymaps"
-        done
-    fi
-}
-
-function configure_vscode() {
-    echo "- VSCode configuration"
-    if is-darwin; then
-        ln -sfv "$(pwd)/configs/vscode/keybindings-mac.json" ~/"Library/Application Support/Code/User/keybindings.json"
+function configure-vscode() {
+    echo "- Configuring vscode"
+    if is-macos; then
+        ln -sfv "$(pwd)/configs/vscode/keybindings-macos.json" ~/"Library/Application Support/Code/User/keybindings.json"
     else
         ln -sfv "$(pwd)/configs/vscode/keybindings.json" ~/.config/Code/User/keybindings.json
     fi
 }
 
-function configure_tabby() {
-    echo "- Tabby configuration"
-    if is-darwin; then
-        ln -sfv "$(pwd)/configs/tabby/config-mac.yaml" ~/"Library/Application Support/tabby/config.yaml"
+function configure-tabby() {
+    echo "- Configure tabby"
+    if is-macos; then
+        ln -sfv "$(pwd)/configs/tabby/config-macos.yaml" ~/"Library/Application Support/tabby/config.yaml"
     else
         ln -sfv "$(pwd)/configs/tabby/config-linux.yaml" ~/.config/tabby/config.yaml
     fi
 }
 
-echo "Installing"
-configure_shell
-configure_git
-configure_ssh
-configure_tmux
-configure_karabiner
-configure_jetbrains "DataGrip" "datagrip"
-configure_jetbrains "JetBrainsClient" "intellij"
-configure_vscode
-configure_tabby
+echo "DOTFILES CONFIGURATION"
+run-configure shell configure-shell
+run-configure git configure-git
+run-configure ssh configure-ssh
+run-configure tmux configure-tmux
+run-configure vscode configure-vscode
+run-configure tabby configure-tabby

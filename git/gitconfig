@@ -1,3 +1,5 @@
+[core]
+	pager = less -FX
 [alias]
     a = add
     aa = add .
