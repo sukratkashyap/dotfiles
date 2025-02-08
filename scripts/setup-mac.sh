@@ -7,9 +7,23 @@ echo "- Installing brew"
 brew analytics off
 
 brew install \
-    curl wget gnu-sed grep watch gnu-tar jq tmux \
-    vim git
+    curl \
+    wget \
+    gnu-sed \
+    grep \
+    watch \
+    gnu-tar \
+    jq \
+    tmux \
+    vim \
+    git
 
 brew install --cask \
-    logi-options-plus karabiner-elements alt-tab rectangle \
-    github visual-studio-code
+    google-chrome \
+    visual-studio-code \
+    github \
+    tabby \
+    logi-options-plus \
+    karabiner-elements \
+    alt-tab \
+    rectangle

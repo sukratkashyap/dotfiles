@@ -21,11 +21,11 @@ function run-configure() {
 
 function configure-shell() {
     echo "- Configuring shell"
-    ln -sfv "$(pwd)/shell/zshrc" ~/.zshrc
-    ln -sfv "$(pwd)/shell/zsh_theme" ~/.zsh_theme
-    ln -sfv "$(pwd)/shell/bashrc" ~/.bashrc
+    ln -sfvh "$(pwd)/shell/zshrc" ~/.zshrc
+    ln -sfvh "$(pwd)/shell/zsh_theme" ~/.zsh_theme
+    ln -sfvh "$(pwd)/shell/bashrc" ~/.bashrc
     mkdir -pv ~/.shell
-    ln -sfv "$(pwd)/shell/shell/"* ~/.shell
+    ln -sfvh "$(pwd)/shell/shell/"* ~/.shell
 }
 
 function configure-git() {
@@ -38,32 +38,42 @@ function configure-git() {
 function configure-ssh() {
     echo "- Configuring SSH"
     mkdir -pv ~/.ssh/config.d
-    ln -sfv "$(pwd)/ssh/config" ~/.ssh/config
-    ln -sfv "$(pwd)/ssh/config.d/"* ~/.ssh/config.d
+    ln -sfvh "$(pwd)/ssh/config" ~/.ssh/config
+    ln -sfvh "$(pwd)/ssh/config.d/"* ~/.ssh/config.d
     echo "-- Setting permissions"
     chmod -v -R 700 ~/.ssh
 }
 
 function configure-tmux() {
     echo "- Configuring tmux"
-    ln -sfv "$(pwd)/tmux/tmux.conf" ~/.tmux.conf
+    ln -sfvh "$(pwd)/tmux/tmux.conf" ~/.tmux.conf
 }
 
 function configure-vscode() {
     echo "- Configuring vscode"
     if is-macos; then
-        ln -sfv "$(pwd)/configs/vscode/keybindings-macos.json" ~/"Library/Application Support/Code/User/keybindings.json"
+        ln -sfvh "$(pwd)/configs/vscode/keybindings-macos.json" ~/"Library/Application Support/Code/User/keybindings.json"
+        ln -sfvh "$(pwd)/configs/vscode/settings.json" ~/"Library/Application Support/Code/User/settings.json"
     else
-        ln -sfv "$(pwd)/configs/vscode/keybindings.json" ~/.config/Code/User/keybindings.json
+        ln -sfvh "$(pwd)/configs/vscode/keybindings.json" ~/.config/Code/User/keybindings.json
+        ln -sfvh "$(pwd)/configs/vscode/settings.json" ~/.config/Code/User/settings.json
     fi
 }
 
 function configure-tabby() {
     echo "- Configure tabby"
     if is-macos; then
-        ln -sfv "$(pwd)/configs/tabby/config-macos.yaml" ~/"Library/Application Support/tabby/config.yaml"
+        ln -sfvh "$(pwd)/configs/tabby/config-macos.yaml" ~/"Library/Application Support/tabby/config.yaml"
     else
-        ln -sfv "$(pwd)/configs/tabby/config-linux.yaml" ~/.config/tabby/config.yaml
+        ln -sfvh "$(pwd)/configs/tabby/config-linux.yaml" ~/.config/tabby/config.yaml
+    fi
+}
+
+function configure-karabiner() {
+    echo "- Configure karabiner"
+    if is-macos; then
+        mkdir -pv ~/.config
+        ln -sfvh "$(pwd)/configs/karabiner" ~/.config/karabiner
     fi
 }
 
@@ -74,3 +84,4 @@ run-configure ssh configure-ssh
 run-configure tmux configure-tmux
 run-configure vscode configure-vscode
 run-configure tabby configure-tabby
+run-configure karabiner configure-karabiner
