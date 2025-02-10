@@ -26,4 +26,6 @@ brew install --cask \
     logi-options-plus \
     karabiner-elements \
     alt-tab \
-    rectangle
+    rectangle \
+    podman \
+    poetry
