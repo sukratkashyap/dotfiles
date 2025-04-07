@@ -16,5 +16,15 @@ fi
 alias reload="omz reload"
 alias work="cd ~/workplace"
 alias dotfiles="cd ~/workplace/dotfiles"
-alias docker=podman
 alias ghub="github"
+
+# Docker aliases
+alias docker=podman
+
+# Kubernetes Aliases
+if which kubectl >/dev/null 2>&1; then
+    alias k='kubectl'
+    alias kns='kubectl config set-context --current --namespace'
+    alias kgp='kubectl get pods'
+    alias kgs='kubectl get svc'
+fi
