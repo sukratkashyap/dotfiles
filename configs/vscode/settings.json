@@ -3,5 +3,9 @@
     "files.insertFinalNewline": true,
     "[dockerfile]": {
         "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-    }
+    },
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "workbench.editorAssociations": {
+        "*.pdf": "latex-workshop-pdf-hook"
+    },
 }
