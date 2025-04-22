@@ -7,25 +7,17 @@ echo "- Installing brew"
 brew analytics off
 
 brew install \
-    curl \
-    wget \
-    gnu-sed \
-    grep \
-    watch \
-    gnu-tar \
-    jq \
-    tmux \
-    vim \
-    git
+    curl wget \
+    gnu-sed grep watch gnu-tar jq \
+    tmux vim \
+    git gh \
+    python pipx poetry \
+    podman kubernetes-cli \
+    ansible
 
 brew install --cask \
     google-chrome \
-    visual-studio-code \
-    github \
-    tabby \
-    logi-options-plus \
-    karabiner-elements \
-    alt-tab \
-    rectangle \
-    podman \
-    poetry
+    karabiner-elements alt-tab rectangle logi-options+ \
+    tabby visual-studio-code github \
+    mactex \
+    unetbootin
