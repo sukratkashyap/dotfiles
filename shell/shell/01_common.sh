@@ -25,7 +25,12 @@ alias docker=podman
 # Kubernetes Aliases
 if which kubectl >/dev/null 2>&1; then
     alias k='kubectl'
-    alias kns='kubectl config set-context --current --namespace'
+    alias ksetns='kubectl config set-context --current --namespace'
+    function kns() {
+        echo "Setting namespace to: $1"
+        alias k="kubectl -n $1"
+    }
     alias kgp='kubectl get pods'
     alias kgs='kubectl get svc'
+    alias kga='kubectl get all'
 fi
