@@ -12,7 +12,7 @@ sudo apt-get install -y \
     zsh tmux vim
 
 echo "- Set ZSH as default shell"
-chsh -s $(which zsh)
+sudo chsh -s $(which zsh) $USER
 
 echo "- Installing DEV packages"
 sudo apt-get install -y \
