@@ -19,6 +19,12 @@ alias work="cd ~/workplace"
 alias dotfiles="cd ~/workplace/dotfiles"
 alias ghub="github"
 
+if is-macos; then
+    alias desk-upgrade="brew upgrade --greedy"
+else
+    alias desk-upgrade="sudo apt-get update && sudo apt-get upgrade -y"
+fi
+
 # Docker aliases
 alias docker=podman
 
