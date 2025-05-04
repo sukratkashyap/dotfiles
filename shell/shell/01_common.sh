@@ -40,3 +40,6 @@ if which kubectl >/dev/null 2>&1; then
     alias kgs='kubectl get svc'
     alias kga='kubectl get all'
 fi
+
+# Python
+export POETRY_VIRTUALENVS_IN_PROJECT="true"
