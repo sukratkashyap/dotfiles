@@ -54,7 +54,7 @@ function configure-vscode() {
     if is-macos; then
         ln -sfnv "$(pwd)/configs/vscode/keybindings-macos.json" ~/"Library/Application Support/Code/User/keybindings.json"
         ln -sfnv "$(pwd)/configs/vscode/settings.json" ~/"Library/Application Support/Code/User/settings.json"
-    else
+    elif test -d ~/.config/Code/User/; then
         ln -sfnv "$(pwd)/configs/vscode/keybindings.json" ~/.config/Code/User/keybindings.json
         ln -sfnv "$(pwd)/configs/vscode/settings.json" ~/.config/Code/User/settings.json
     fi
@@ -64,7 +64,7 @@ function configure-tabby() {
     echo "- Configure tabby"
     if is-macos; then
         ln -sfnv "$(pwd)/configs/tabby/config-macos.yaml" ~/"Library/Application Support/tabby/config.yaml"
-    else
+    elif test -d ~/.config/tabby/; then
         ln -sfnv "$(pwd)/configs/tabby/config-linux.yaml" ~/.config/tabby/config.yaml
     fi
 }
