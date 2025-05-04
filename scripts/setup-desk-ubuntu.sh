@@ -16,6 +16,8 @@ sudo chsh -s $(which zsh) $USER
 
 echo "- Installing DEV packages"
 sudo apt-get install -y \
-    git \
+    git gh \
     python3 python3-dev python3-pip \
     default-jdk
+
+pipx install poetry

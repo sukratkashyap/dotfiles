@@ -19,5 +19,6 @@ brew install --cask \
     google-chrome \
     karabiner-elements alt-tab rectangle logi-options+ \
     tabby visual-studio-code github \
+    mongodb-compass \
     mactex \
     unetbootin

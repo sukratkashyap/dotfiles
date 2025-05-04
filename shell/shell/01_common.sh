@@ -11,8 +11,8 @@ function is-macos() {
 
 if is-macos; then
     export PATH="$PATH:$(brew --prefix python)/libexec/bin"
-    export PATH="$PATH:$HOME/.local/bin"
 fi
+export PATH="$PATH:$HOME/.local/bin"
 
 alias reload="omz reload"
 alias work="cd ~/workplace"
