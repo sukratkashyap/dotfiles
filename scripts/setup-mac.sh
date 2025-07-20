@@ -12,7 +12,7 @@ brew install \
     tmux vim \
     git gh \
     python pipx poetry \
-    podman kubernetes-cli helm \
+    podman podman-compose kubernetes-cli helm kind \
     ansible
 
 brew install --cask \
