@@ -28,6 +28,9 @@ fi
 # Docker aliases
 alias docker=podman
 
+# Mise
+eval "$(mise activate bash)"
+
 # Kubernetes Aliases
 if which kubectl >/dev/null 2>&1; then
     alias k='kubectl'

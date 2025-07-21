@@ -11,6 +11,7 @@ brew install \
     gnu-sed grep watch gnu-tar jq \
     tmux vim \
     git gh \
+    mise \
     python pipx poetry \
     podman podman-compose kubernetes-cli helm kind \
     ansible
