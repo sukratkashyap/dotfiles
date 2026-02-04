@@ -29,10 +29,13 @@ fi
 alias docker=podman
 
 # Mise
-eval "$(mise activate bash)"
+if command -v mise >/dev/null 2>&1; then
+  eval "$(mise activate zsh)"
+fi
+
 
 # Kubernetes Aliases
-if which kubectl >/dev/null 2>&1; then
+if command -v kubectl >/dev/null 2>&1; then
     alias k='kubectl'
     alias ksetns='kubectl config set-context --current --namespace'
     function kns() {
