@@ -20,7 +20,7 @@ alias dotfiles="cd ~/workplace/dotfiles"
 alias ghub="github"
 
 if is-macos; then
-    alias desk-upgrade="brew upgrade --greedy"
+    alias desk-upgrade="brew upgrade"
 else
     alias desk-upgrade="sudo apt-get update && sudo apt-get upgrade -y"
 fi

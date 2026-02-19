@@ -8,4 +8,30 @@
     "workbench.editorAssociations": {
         "*.pdf": "latex-workshop-pdf-hook"
     },
+    "remote.SSH.connectTimeout": 1800,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "editor.minimap.enabled": false,
+    "python.analysis.typeCheckingMode": "standard",
+    "containers.containerClient": "com.microsoft.visualstudio.containers.podman",
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    },
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "claudeCode.preferredLocation": "panel",
+    "[python]": {
+        "diffEditor.ignoreTrimWhitespace": true,
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "diffEditor.hideUnchangedRegions.enabled": true
 }

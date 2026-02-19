@@ -33,7 +33,8 @@ hotkeys:
   profile:
     zsh:
       - - ⌘-T
-  ctrl-c: []
+  ctrl-c:
+    - ⌘-C
   shell: {}
   toggle-window:
     - - ⌘-1
@@ -42,8 +43,7 @@ hotkeys:
     - - Ctrl-S
   copy-current-path: []
   scroll-to-bottom: []
-  copy:
-    - ⌘-C
+  copy: []
   paste:
     - ⌘-V
   clear:
@@ -111,26 +111,15 @@ hotkeys:
     - ⌘-Shift-Right
   rearrange-panes:
     - ⌘-Shift
-  tab-1:
-    - ⌘-1
-  tab-2:
-    - ⌘-2
-  tab-3:
-    - ⌘-3
-  tab-4:
-    - ⌘-4
-  tab-5:
-    - ⌘-5
-  tab-6:
-    - ⌘-6
-  tab-7:
-    - ⌘-7
-  tab-8:
-    - ⌘-8
-  tab-9:
-    - ⌘-9
-  tab-10:
-    - ⌘-0
+  tab-1: []
+  tab-2: []
+  tab-3: []
+  tab-4: []
+  tab-5: []
+  tab-6: []
+  tab-7: []
+  tab-8: []
+  tab-9: []
   duplicate-tab: []
   explode-tab:
     - ⌘-Shift-.
@@ -198,6 +187,12 @@ hotkeys:
     - ⌘-Shift-P
   reconnect-tab: []
   disconnect-tab: []
+  scroll-page-up:
+    - ⌥-PageUp
+  scroll-page-down:
+    - ⌥-PageDown
+  group-selectors: {}
+  tab-10: []
 serial: {}
 ssh: {}
 appearance:
@@ -207,7 +202,7 @@ appearance:
   dockHideOnBlur: true
 enableWelcomeTab: false
 pluginBlacklist: []
-version: 7
+version: 8
 profiles: []
 recoverTabs: false
 configSync:
