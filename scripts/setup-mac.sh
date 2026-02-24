@@ -2,8 +2,13 @@
 
 set -e
 
-echo "- Installing brew"
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if ! command -v brew >/dev/null 2>&1; then
+    echo "- Installing brew"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+else
+    echo "- Brew already installed, skipping install"
+fi
+
 brew analytics off
 
 brew install \
@@ -19,7 +24,7 @@ brew install \
 brew install --cask \
     google-chrome \
     karabiner-elements alt-tab rectangle logi-options+ \
-    tabby visual-studio-code github \
+    tabby visual-studio-code github podman-desktop \
     mongodb-compass \
     mactex \
     unetbootin
