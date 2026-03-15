@@ -31,5 +31,10 @@
     {
         "key": "cmd+]",
         "command": "workbench.action.navigateForward"
+    },
+    {
+        "key": "shift+alt+down",
+        "command": "-editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
     }
 ]

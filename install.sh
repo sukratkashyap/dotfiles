@@ -32,7 +32,7 @@ function configure-git() {
     echo "- Configuring git"
     git config --global include.path "$(pwd)/git/gitconfig"
     echo "-- include.path value"
-    git config get include.path
+    git config --get include.path
 }
 
 function configure-ssh() {
