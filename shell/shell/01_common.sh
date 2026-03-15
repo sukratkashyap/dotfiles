@@ -8,17 +8,12 @@ function is-macos() {
 }
 
 # Common
-
-if is-macos; then
-    export PATH="$PATH:$(brew --prefix python)/libexec/bin"
-fi
-export PATH="$PATH:$HOME/.local/bin"
-
 alias reload="omz reload"
 alias work="cd ~/workplace"
 alias dotfiles="cd ~/workplace/dotfiles"
-alias ghub="github"
 
+alias ghub="github"
+alias ll="ls -lah"
 if is-macos; then
     alias desk-upgrade="brew upgrade"
 else
@@ -32,7 +27,6 @@ alias docker=podman
 if command -v mise >/dev/null 2>&1; then
   eval "$(mise activate zsh)"
 fi
-
 
 # Kubernetes Aliases
 if command -v kubectl >/dev/null 2>&1; then
@@ -48,8 +42,12 @@ if command -v kubectl >/dev/null 2>&1; then
 fi
 
 # Python
+if is-macos; then
+    export PATH="$PATH:$(brew --prefix python)/libexec/bin"
+fi
+export PATH="$PATH:$HOME/.local/bin"
 export POETRY_VIRTUALENVS_IN_PROJECT="true"
 export POETRY_VIRTUALENVS_CREATE="true"
 
 # Node
-export PATH="$HOME/.npm-global/bin:$PATH"
+export PATH="$PATH:$HOME/.npm-global/bin"
