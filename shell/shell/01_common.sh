@@ -50,3 +50,6 @@ fi
 # Python
 export POETRY_VIRTUALENVS_IN_PROJECT="true"
 export POETRY_VIRTUALENVS_CREATE="true"
+
+# Node
+export PATH="$HOME/.npm-global/bin:$PATH"
