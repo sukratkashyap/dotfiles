@@ -21,7 +21,12 @@ else
 fi
 
 # Docker aliases
-alias docker=podman
+if command -v podman >/dev/null 2>&1; then
+    PODMAN_SOCKET_PATH="$(podman machine inspect --format '{{.ConnectionInfo.PodmanSocket.Path}}' 2>/dev/null)"
+    if test -n "${PODMAN_SOCKET_PATH}"; then
+        export DOCKER_HOST="unix://${PODMAN_SOCKET_PATH}"
+    fi
+fi
 
 # Mise
 if command -v mise >/dev/null 2>&1; then

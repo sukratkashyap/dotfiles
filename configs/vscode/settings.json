@@ -36,5 +36,12 @@
     },
     "dev.containers.dockerPath": "podman",
     "chat.viewSessions.orientation": "stacked",
-    "claudeCode.preferredLocation": "panel"
+    "claudeCode.preferredLocation": "panel",
+    "roo-cline.debug": false,
+    "roo-cline.allowedCommands": [
+        "git log",
+        "git diff",
+        "git show"
+    ],
+    "roo-cline.deniedCommands": []
 }
