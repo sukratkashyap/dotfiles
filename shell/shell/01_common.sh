@@ -22,9 +22,13 @@ fi
 
 # Docker aliases
 if command -v podman >/dev/null 2>&1; then
-    PODMAN_SOCKET_PATH="$(podman machine inspect --format '{{.ConnectionInfo.PodmanSocket.Path}}' 2>/dev/null)"
-    if test -n "${PODMAN_SOCKET_PATH}"; then
-        export DOCKER_HOST="unix://${PODMAN_SOCKET_PATH}"
+    if is-macos; then
+        PODMAN_SOCKET_PATH="$(podman machine inspect --format '{{.ConnectionInfo.PodmanSocket.Path}}' 2>/dev/null)"
+        if test -n "${PODMAN_SOCKET_PATH}"; then
+            export DOCKER_HOST="unix://${PODMAN_SOCKET_PATH}"
+        fi
+    else
+        alias docker-compose='docker compose'
     fi
 fi
 
