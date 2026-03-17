@@ -4,13 +4,12 @@ groups: []
 configSync:
   parts: {}
 hotkeys:
-  toggle-window:
-    - Ctrl-1
+  toggle-window: []
   copy-current-path: []
   ctrl-c:
-    - Alt-C
-  copy:
     - Ctrl-C
+  copy:
+    - Ctrl-Shift-C
   paste:
     - Ctrl-V
   select-all:
@@ -47,9 +46,13 @@ hotkeys:
     - Ctrl-Alt-Shift-I
   scroll-to-top:
     - Ctrl-PageUp
-  scroll-up:
+  scroll-page-up:
     - Alt-PageUp
+  scroll-up:
+    - Ctrl-Shift-Up
   scroll-down:
+    - Ctrl-Shift-Down
+  scroll-page-down:
     - Alt-PageDown
   scroll-to-bottom:
     - Ctrl-PageDown
@@ -68,6 +71,7 @@ hotkeys:
     - Ctrl-Shift-N
   profile: {}
   profile-selectors: {}
+  group-selectors: {}
   toggle-fullscreen:
     - F11
   close-tab:
@@ -191,38 +195,18 @@ terminal:
       - '#ddaaff'
       - '#b7fff9'
       - '#ffffff'
-  lightColorScheme:
-    name: Tabby Default Light
-    foreground: '#4d4d4c'
-    background: '#ffffff'
-    cursor: '#4d4d4c'
-    colors:
-      - '#000000'
-      - '#c82829'
-      - '#718c00'
-      - '#eab700'
-      - '#4271ae'
-      - '#8959a8'
-      - '#3e999f'
-      - '#ffffff'
-      - '#000000'
-      - '#c82829'
-      - '#718c00'
-      - '#eab700'
-      - '#4271ae'
-      - '#8959a8'
-      - '#3e999f'
-      - '#ffffff'
-  customColorSchemes: []
-  copyAsHTML: false
   warnOnMultilinePaste: false
+  copyAsHTML: false
   bracketedPaste: false
 ssh: {}
 clickableLinks:
   modifier: ctrlKey
 accessibility:
   animations: false
-appearance: {}
+appearance:
+  dock: top
+  dockSpace: 0.5
+  dockHideOnBlur: true
 hacks: {}
 providerBlacklist: []
 commandBlacklist: []
