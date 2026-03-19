@@ -8,9 +8,14 @@ function is-macos() {
 }
 
 # Common
-alias reload="omz reload"
 alias work="cd ~/workplace"
 alias dotfiles="cd ~/workplace/dotfiles"
+
+if test -n "${ZSH_VERSION:-}"; then
+    alias reload="omz reload"
+elif test -n "${BASH_VERSION:-}"; then
+    alias reload="source ~/.bashrc"
+fi
 
 alias ghub="github"
 alias ll="ls -lah"
@@ -34,7 +39,11 @@ fi
 
 # Mise
 if command -v mise >/dev/null 2>&1; then
-  eval "$(mise activate zsh)"
+    if test -n "${ZSH_VERSION:-}"; then
+        eval "$(mise activate zsh)"
+    elif test -n "${BASH_VERSION:-}"; then
+        eval "$(mise activate bash)"
+    fi
 fi
 
 # Kubernetes Aliases
