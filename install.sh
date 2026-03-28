@@ -77,6 +77,12 @@ function configure-karabiner() {
     fi
 }
 
+function configure-claude() {
+    echo "- Configure claude"
+    mkdir -pv ~/.claude
+    ln -sfnv "$(pwd)/configs/claude/settings.json" ~/.claude/settings.json
+}
+
 echo "DOTFILES CONFIGURATION"
 run-configure shell configure-shell
 run-configure git configure-git
@@ -85,3 +91,4 @@ run-configure tmux configure-tmux
 run-configure vscode configure-vscode
 run-configure tabby configure-tabby
 run-configure karabiner configure-karabiner
+run-configure claude configure-claude
