@@ -43,5 +43,5 @@
         "git diff",
         "git show"
     ],
-    "roo-cline.deniedCommands": []
+    "workbench.colorTheme": "Dark Modern"
 }
