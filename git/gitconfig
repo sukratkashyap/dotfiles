@@ -10,7 +10,7 @@
     cma = commit --amend
     cp = cherry-pick
     d = diff
-    st = status
+    st = status --ignore-submodules=none
     stv = status -v
     rs = reset
     rsh = reset --soft HEAD~1
