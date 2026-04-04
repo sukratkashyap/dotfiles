@@ -1,40 +1,46 @@
 {
-    "security.workspace.trust.untrustedFiles": "open",
-    "files.insertFinalNewline": true,
-    "terminal.integrated.defaultProfile.osx": "zsh",
     "workbench.editorAssociations": {
         "*.pdf": "latex-workshop-pdf-hook"
     },
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
+    "workbench.colorTheme": "Dark Modern",
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+
+    "files.insertFinalNewline": true,
     "editor.minimap.enabled": false,
-    "python.analysis.typeCheckingMode": "standard",
-    "containers.containerClient": "com.microsoft.visualstudio.containers.podman",
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    },
+    "diffEditor.hideUnchangedRegions.enabled": true,
+
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "editor.codeActionsOnSave": {
-        "source.organizeImports": "explicit"
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "git.autofetch": true,
-    "git.confirmSync": false,
-    "git.enableSmartCommit": true,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
     "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.defaultFormatter": "ms-python.black-formatter"
     },
+    "python.analysis.typeCheckingMode": "standard",
     "isort.args": [
         "--profile",
         "black"
     ],
-    "diffEditor.hideUnchangedRegions.enabled": true,
-    "[javascriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
+
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "containers.containerClient": "com.microsoft.visualstudio.containers.podman",
     "dev.containers.dockerPath": "podman",
+
+    "chat.commandCenter.enabled": false,
     "chat.viewSessions.orientation": "stacked",
     "claudeCode.preferredLocation": "panel",
     "roo-cline.debug": false,
@@ -42,6 +48,5 @@
         "git log",
         "git diff",
         "git show"
-    ],
-    "workbench.colorTheme": "Dark Modern"
+    ]
 }
